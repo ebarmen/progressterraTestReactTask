@@ -10,6 +10,7 @@ import {
 
 function BonusCard() {
   const [info, setInfo] = useState(null);
+  const [error, setError] = useState(null)
   useEffect(() => {
     let data = {
       idClient: ClientID,
@@ -38,9 +39,12 @@ function BonusCard() {
         })
       )
       .then((res) => res.json())
-      .then((res) => setInfo(res));
+      .then((res) => setInfo(res))
+      .catch(e => setError(e.message))
   }, []);
-
+  
+  if(error) return <>{error}</>
+  
   if (!info) return <>loading...</>;
 
   let { currentQuantity, forBurningQuantity } = info.data;
