@@ -1,0 +1,31 @@
+.bg-c{
+  background-color: rgb(230,65, 75);
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin-top: 100px;
+}
+.container{
+  width: 85%;
+  margin: 0 auto;
+}
+.bonus-card{
+  background-color: #fff;
+  width: 100%;
+  padding: 25px ;
+  border-radius: 13px;
+  box-shadow:5px -1px rgba(0, 0, 0, .09);
+  transform: translateY(-50%);
+}
+.currentQuantity{
+  font-size: 25px;
+  font-weight: 800;
+}
+.burningQuantity{
+  font-weight: 300;
+  font-size: 18px;
+  color: dimgrey;
+  opacity: 0.8;
+  letter-spacing: 1.5px;
+}
+
